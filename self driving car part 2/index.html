@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>World Editor</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h1>World Editor</h1>
+        <canvas id="myCanvas"></canvas>
+        <script src="js/math/graph.js"></script>
+        <script src="js/primitives/point.js"></script>
+        <script src="js/primitives/segment.js"></script>
+        <script type="text/javascript">
+            myCanvas.width = 600;
+            myCanvas.height = 600;
+            const ctx = myCanvas.getContext("2d");
+            const p1 = new Point (200, 200);
+            const p2 = new Point (500, 300);
+            const p3 = new Point (600, 100);
+            const p4 = new Point (400, 100);
+            const p5 = new Point (900, 200);
+            const graph = new Graph([p1,p2,p3,p4,p5]);
+            graph.draw(ctx);
+        </script>
+    </body>
+    </html>
